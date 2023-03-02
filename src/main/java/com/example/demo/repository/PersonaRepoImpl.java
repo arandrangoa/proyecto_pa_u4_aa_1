@@ -21,7 +21,7 @@ public class PersonaRepoImpl implements IPersonaRepo{
 	public List<Persona> buscarTodos() {
 		// TODO Auto-generated method stub
 				TypedQuery<Persona> myQuery = this.entityManager
-						.createQuery("SELECT c FROM Ciudadano c", Persona.class);
+						.createQuery("SELECT p FROM Persona p", Persona.class);
 				List<Persona> lista=myQuery.getResultList();
 				return lista;
 	}
